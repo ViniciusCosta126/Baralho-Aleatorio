@@ -1,9 +1,9 @@
+import Rotas from './routes/index'
+
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Rotas/>
   )
 }
 
