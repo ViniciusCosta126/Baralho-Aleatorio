@@ -1,17 +1,27 @@
 import * as C from "./style";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { PokemonContextGlobal } from "../../types/Pokemon";
 import { PokemonContext } from "../../providers/auth";
 
 const Home = () => {
-  const { pokemons, fetchPokemons,fetchNewPokemon, shuffleCards } = useContext(
+  const { fetchPokemons } = useContext(
     PokemonContext
   ) as PokemonContextGlobal;
   const [nome, setNome] = useState<string>("");
+  const navigate = useNavigate()
+
   useEffect(() => {
     fetchPokemons()
   }, []);
+
+  function handleClick(){
+    if(nome !== ""){
+      navigate(`/cards/${nome}`)
+    }else{
+      alert("Nome nao pode ser vazio")
+    }
+  }
   return (
     <C.Container>
       <C.ContainerForm>
@@ -20,9 +30,7 @@ const Home = () => {
           value={nome}
           onChange={(e) => setNome(e.target.value)}
         />
-        <Link to={`/cards/${nome}`}>
-          <C.ButtonSubmit>Ver Cartas</C.ButtonSubmit>
-        </Link>
+          <C.ButtonSubmit onClick={()=>handleClick()}>Ver Cartas</C.ButtonSubmit>
       </C.ContainerForm>
     </C.Container>
   );

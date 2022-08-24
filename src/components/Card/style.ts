@@ -1,3 +1,4 @@
+/* A styled component. */
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -5,11 +6,15 @@ export const Container = styled.div`
     width: 100%;
   }
   width: 20%;
-  border: 1px solid black;
+  background-color: #fff;
   padding: 16px;
   margin-right: 8px;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-bottom: 10px;
+  transition: all ease-out 0.2s;
+  &:hover{
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  }
   > img {
     display: block;
     width: 100%;
@@ -27,7 +32,11 @@ export const Container = styled.div`
   }
 `;
 
-export const PontuacaoContainer = styled.div`
+interface BarProps{
+  pontos:number
+}
+
+export const PontuacaoContainer = styled.div<BarProps>`
   >p{
     width: 100%;
   }
@@ -37,6 +46,9 @@ export const PontuacaoContainer = styled.div`
     margin-top: 8px;
     border-radius: 50px;
     width: 100%;
-    border: 1px solid black;
+    background: ${(props)=> `linear-gradient(90deg, #c93d3d ${props.pontos * 10}%, #b87f7f ${props.pontos * 10}%)` };
+    color: #fff;
+    font-weight: 700;
+    padding: 4px;
   }
 `

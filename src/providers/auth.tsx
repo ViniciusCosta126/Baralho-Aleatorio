@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { Pokemon, PokemonContextGlobal } from "../types/Pokemon";
 
 export const PokemonContext = createContext<PokemonContextGlobal | null>(null);

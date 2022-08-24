@@ -19,9 +19,9 @@ const Card = ({ pokemon, pontuacao }: Props) => {
       <div>
         <h3>{pokemon.name}</h3>
         <p>{formatDescription(pokemon)}</p>
-        <C.PontuacaoContainer>
+        <C.PontuacaoContainer pontos={memorizedPontuacao}>
           <p>Pontuação:</p>
-          <span>{memorizedPontuacao}</span>
+          <span>{memorizedPontuacao}/10</span>
         </C.PontuacaoContainer>
       </div>
     </C.Container>

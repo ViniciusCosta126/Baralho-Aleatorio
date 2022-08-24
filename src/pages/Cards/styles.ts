@@ -3,15 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 80%;
   border-radius: 20px;
-  padding: 24px;
-  margin: 20px auto;
-  background-color: #fff;
+  padding: 0 24px;
+  margin: 20px auto 0;
 `;
 export const Title = styled.h1`
   text-align: right;
   color: #1a1a1a;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: -3px;
 `;
 export const CardsContainer = styled.div`
@@ -27,13 +26,12 @@ export const ButtonsContainer = styled.div<ButtonProps>`
 }
   width: 25%;
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 16px;
   button {
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     border: none;
-    padding: 16px 24px;
-    margin-right: 10px;
+    padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;

@@ -24,7 +24,8 @@ margin-right: 20px;
 padding: 8px;
 `
 
-export const ButtonSubmit = styled.a`
+export const ButtonSubmit = styled.button`
+border: none;
     color: #fff;
     padding: 8px 24px;
     border-radius: 6px;
