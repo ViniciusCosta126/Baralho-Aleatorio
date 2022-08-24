@@ -17,6 +17,7 @@ Para buildar o projeto é bem simples você precisara rodar o comando:
 
 Isso fará com que ele build o projeto e traga os arquivos para produção. Esses arquivos ficarão dentro da pasta dist
 
+## Paginas
 ### Pagina Home
 
 Nesta primeira página temos um simples formulário, onde você precisa digitar um nome para que consiga avançar para a próxima etapa. Depois que digitar o nome desejado basta clicar no botão ver cartas para que consiga ver as cartas aleatórias que foram trazidas da api.
